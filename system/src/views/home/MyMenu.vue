@@ -2,14 +2,13 @@
   <el-row class="tac">
     <el-col :span="12">
       <el-menu :collapse="isCollapsed" :collapse-transition="true" class="el-menu-vertical-demo el_menu"
-        active-text-color="#ffd04b" unique-opened background-color="#112f50" text-color="#fff" @open="handleOpen" @close="handleClose"
-        @select="handleSelect">
+        active-text-color="#ffd04b" unique-opened background-color="#112f50" text-color="#fff" @open="handleOpen"
+        @close="handleClose" @select="handleSelect">
 
-        <el-menu-item class="top">
-          <template #title>
-            <span class="title-text">学生管理系统</span>
-          </template>
-        </el-menu-item>
+        <div class="header-container">
+          <img src="../../assets/img/th.jpg" alt="头像" class="avatar">
+          <span class="name" style="margin-top: 10px;font-size: large;font-weight: bold;color: gray;">学能星图</span>
+        </div>
 
         <el-sub-menu index="1">
           <template #title>
@@ -68,6 +67,7 @@
           </template>
           <el-menu-item-group title="管理员">
             <el-menu-item index="studentappraisepage">&nbsp;&nbsp;学生评价数据</el-menu-item>
+            <el-menu-item index="studentappraisepage">&nbsp;&nbsp;学生评价体系结构管理</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group title="教师">
             <el-menu-item index="teacherstudentappraisepage">&nbsp;&nbsp;教师评价</el-menu-item>
@@ -139,6 +139,19 @@ const handleSelect = (key, keyPath) => {
 .el_menu {
   border-right: none;
 }
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 
 .top {
   background-color: #000;

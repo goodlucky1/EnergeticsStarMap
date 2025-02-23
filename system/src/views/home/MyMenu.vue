@@ -7,7 +7,9 @@
 
         <div class="header-container">
           <img src="../../assets/img/th.jpg" alt="头像" class="avatar">
-          <span class="name" style="margin-top: 10px;font-size: large;font-weight: bold;color: gray;">学能星图</span>
+          <transition name="router-fade" mode="out-in">
+            <span class="name" v-if="!isCollapsed" style="margin-top: 10px;font-size: large;font-weight: bold;color: gray;">学能星图</span>
+          </transition>  
         </div>
 
         <el-sub-menu index="1">
@@ -109,6 +111,7 @@ const isCollapsed = ref(false);
 
 watch(() => props.isCollapsed, (val) => {
   isCollapsed.value = val;
+
 });
 
 const isshow = ref({
@@ -144,7 +147,8 @@ const handleSelect = (key, keyPath) => {
   flex-direction: column;
   align-items: center;
   padding: 8px 0;
-  
+
+  transition: all 0.5s ease;
 }
 .avatar {
   width: 50px;

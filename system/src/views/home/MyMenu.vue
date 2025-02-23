@@ -111,7 +111,6 @@ const isCollapsed = ref(false);
 
 watch(() => props.isCollapsed, (val) => {
   isCollapsed.value = val;
-
 });
 
 const isshow = ref({
@@ -148,7 +147,7 @@ const handleSelect = (key, keyPath) => {
   align-items: center;
   padding: 8px 0;
 
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .avatar {
   width: 50px;

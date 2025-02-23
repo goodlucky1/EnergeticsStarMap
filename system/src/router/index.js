@@ -35,7 +35,7 @@ const router = createRouter({
           meta: {
             rolelevel: 10,
             metaname: "角色管理",
-            isitem:false
+            isitem:true
           },
           children: [
             {

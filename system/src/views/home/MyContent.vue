@@ -153,6 +153,8 @@ const out = () => {
   .icon {
     font-size: 24px;
     flex: 1;
+    width: 20px;
+    height: 20px;
 
     i {
       cursor: pointer;

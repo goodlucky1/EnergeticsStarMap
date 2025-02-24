@@ -57,6 +57,7 @@ class MySQLChain:
         """添加 WHERE 条件"""
         self.where_conditions.append(condition)
         self.where_params.extend(params)
+        print(params)
         return self
     def limit(self, limit):
         """设置 LIMIT"""
